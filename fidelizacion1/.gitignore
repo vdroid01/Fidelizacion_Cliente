@@ -1,4 +1,6 @@
 # Ignorar archivos de configuración local
-.gitignore
 db.sqlite3
 manage.py
+
+# Ignorar el archivo .gitignore en sí mismo
+.gitignore
