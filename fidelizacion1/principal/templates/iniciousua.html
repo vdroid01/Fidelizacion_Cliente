@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Principal</title>
+  <link rel="stylesheet" href="{% static "iniciousua.css" %}">
+</head>
+
+<body>
+  <!-- Header con menú -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">Logo</div>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">&#9776;</label>
+      <ul class="nav-links">
+        <li><a href="#premios">Premios</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#tarjeta-digital">Crear Tarjeta Digital</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- Contenido principal -->
+  <main>
+
+    <!-- Sección de puntos -->
+    <section id="cardScore">
+      <section>
+        <h2>Mis Puntos</h2>
+        {% for clientes in clientes %}
+        <div class="counter"><p>{{ clientes.Puntos }}</p></div>
+        {% endfor %}
+      </section>
+
+      <!-- Sección de crear tarjeta digital -->
+      <section id="tarjeta-digital">
+        <h2>Crear Tarjeta Digital</h2>
+        <form>
+          <label for="telefono">Número de teléfono:</label>
+          <input type="tel" id="telefono" required>
+          <button type="submit">Crear Tarjeta</button>
+        </form>
+        <!-- Tarjeta digital creada -->
+        <div class="tarjeta-digital" style="display: none;">
+          <h3>Tarjeta Digital</h3>
+          <p>Número de teléfono: <span id="telefono-tarjeta"></span></p>
+        </div>
+      </section>
+    </section>
+
+    <!-- Sección de premios -->
+    <!-- Contenedor de la sección de recompensas -->
+    <section class="rewards-section">
+      <!-- Título de la sección -->
+      <h2 class="rewards-title">Premios</h2>
+      <!-- Contenedor de las recompensas -->
+      <div class="rewards-container">
+        <!-- Recompensa 1 -->
+        <div class="reward">
+          <img src="" alt="Icono de la recompensa 1" class="reward-icon">
+          <h3 class="reward-title">Recompensa 1: 100 puntos</h3>
+          <p class="reward-desc">Descripción de la recompensa 1</p>
+          <button class="reward-btn">Redimir</button>
+        </div>
+        <!-- Recompensa 2 -->
+        <div class="reward">
+          <img src="" alt="Icono de la recompensa 2" class="reward-icon">
+          <h3 class="reward-title">Recompensa 2: 200 puntos</h3>
+          <p class="reward-desc">Descripción de la recompensa 2</p>
+          <button class="reward-btn">Redimir</button>
+        </div>
+        <!-- Recompensa 3 -->
+        <div class="reward">
+          <img src="" alt="Icono de la recompensa 3" class="reward-icon">
+          <h3 class="reward-title">Recompensa 3: 500 puntos</h3>
+          <p class="reward-desc">Descripción de la recompensa 3</p>
+          <button class="reward-btn">Redimir</button>
+        </div>
+      </div>
+      <!-- Botón de ver más recompensas -->
+      <center><button class="more-rewards-btn">Ver más recompensas</button></center>
+    </section>
+
+    <!-- Sección de beneficios -->
+    <section id="beneficios">
+      <h2>Beneficios</h2>
+      <p>Por cada 100 pesos de compra que realice, se le bonificara con 5pts. Mientras más puntos obtenga más
+        probabilidad de reclamar increibles premios.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Tu empresa</p>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20">
+      <path fill="currentColor"
+        d="M17 1H3c-1.1 0-2 .9-2 2v14c0 1.101.9 2 2 2h7v-7H8V9.525h2v-2.05c0-2.164 1.212-3.684 3.766-3.684l1.803.002v2.605h-1.197c-.994 0-1.372.746-1.372 1.438v1.69h2.568L15 12h-2v7h4c1.1 0 2-.899 2-2V3c0-1.1-.9-2-2-2" />
+    </svg>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "beneficios.css" %}">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container1">
+        <div class="logo">Logo</div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <ul class="nav-links">
+      <li><a href="#puntos">Puntos</a></li>
+      <li><a href="#premios">Premios</a></li>
+      <li><a href="#beneficios">Beneficios</a></li>
+      <li><a href="#tarjeta-digital">Crear Tarjeta Digital</a></li>
+  </ul>
+    </div>
+</nav>
+
+<div class="generales">
+  <div class="title">
+      <h1>Premios</h1>
+  </div>
+  <div>
+      <h3>Obtén recompensas por comprar para empezar a ganar puntos. Canjea tus puntos por tarjetas regalo, articulos electrodomesticos, donaciones sin ánimo de lucro y mucho más.</h3>
+  </div>
+</div>
+<main>
+    <section class="rewards-section">
+        <!-- Título de la sección -->
+        
+        <!-- Contenedor de las recompensas -->
+        <div id="container" style="display: flex; flex-wrap: wrap; justify-content: center;"></div>
+        
+      </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Tu empresa</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20">
+            <path fill="currentColor" d="M17 1H3c-1.1 0-2 .9-2 2v14c0 1.101.9 2 2 2h7v-7H8V9.525h2v-2.05c0-2.164 1.212-3.684 3.766-3.684l1.803.002v2.605h-1.197c-.994 0-1.372.746-1.372 1.438v1.69h2.568L15 12h-2v7h4c1.1 0 2-.899 2-2V3c0-1.1-.9-2-2-2"/>
+        </svg>
+    </footer>
+    <script src="{% static "contenedores.js" %}"></script>
+</body>
+</html>

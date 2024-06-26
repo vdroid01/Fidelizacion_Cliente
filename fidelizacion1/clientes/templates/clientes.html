@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+</head>
+<body>
+    <h1>Lista de Clientes</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Teléfono Móvil</th>
+                <th>Dirección</th>
+                <th>Correo Electrónico</th>
+                <th>Estado</th>
+                <th>Ciudad</th>
+                <th>Puntos</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cliente in clientes %}
+            <tr>
+                <td>{{ cliente.Nombre }}</td>
+                <td>{{ cliente.Apellido_Paterno }}</td>
+                <td>{{ cliente.Apellido_Materno }}</td>
+                <td>{{ cliente.Telefono_Movil }}</td>
+                <td>{{ cliente.Direccion }}</td>
+                <td>{{ cliente.Correo }}</td>
+                <td>{{ cliente.Estado }}</td>
+                <td>{{ cliente.Ciudad }}</td>
+                <td>{{ cliente.Puntos }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <button>Agregar cliente</button>
+    <a href="">Agregar cliente</a>
+    <button>Eliminar cliente</button>
+    <button>Modificar atributos de un cliente</button>
+    <button>Asignar en puntos</button>
+</body>
+</html>

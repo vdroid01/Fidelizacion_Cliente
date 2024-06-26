@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Premios</title>
+    <script src="{% static 'js.js' %}"></script>  <!-- Asegúrate de que la ruta al archivo.js sea correcta -->
+    <style>
+        /* Estilos opcionales para los premios */
+        .premio {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .premio img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="premios-container">
+        
+        <!-- Aquí se añadirán dinámicamente los premios -->
+    </div>
+</body>
+</html>
